@@ -29,10 +29,10 @@ export function Todolist(props: TodolistPropsType) {
      </div>
       <ul>
           {
-            props.tasks.map( (t) => {
-              return <li><input type="checkbox" checked={t.isDone} />
-              <span>{t.title}</span>
-              <button onClick={ ()=> {props.removeTask(t.id)}}>Del</button>
+            props.tasks.map( (tasks) => {
+              return <li><input type="checkbox" checked={tasks.isDone} />
+              <span>{tasks.title}</span>
+              <button onClick={ ()=> {props.removeTask(tasks.id)}}>Del</button>
               </li>
             })
           }
